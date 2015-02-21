@@ -1,0 +1,25 @@
+<!-- INCLUDE ucp_header.html -->
+<br>
+<form method="post">
+	Topic à parser
+   <input name="t" type="text" value="{TOPIC_ID}"/>
+   <input name="submit" type="submit" value="Tester" />
+</form>
+<br>
+
+<table class="table1" cellspacing="1">
+    <tr>
+        <th>id</th>
+        <th>posteur</th>
+        <th>liste des posts</th>
+    </tr>
+    <!-- BEGIN block_name -->
+	<tr>
+        <td>{block_name.ID}</td>
+        <td>{block_name.POSTER}</td>
+        <td>{block_name.POSTER_POSTS}</td>
+    </tr>
+    <!-- END block_name -->
+</table>
+
+<!-- INCLUDE ucp_footer.html -->
