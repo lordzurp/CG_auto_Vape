@@ -4,7 +4,7 @@
 */
 if (empty($lang) || !is_array($lang))
 {
-    $lang = array();
+	$lang = array();
 }
 // DEVELOPERS PLEASE NOTE
 //
@@ -19,6 +19,12 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-    'UCP_CG_INDEX_TITLE'                        => 'Gestion CG',
+	'UCP_CG_INDEX_TITLE'			=> 'Gestion CG',
+	'UCP_CG_PARSE_EDF_TITLE'		=> 'Suivi EdF',
+	'UCP_CG_INSCRIPTION_EDF_TITLE'	=> 'Inscription EdF',
+	'UCP_CG_LISTE_EDF_TITLE'		=> 'listing EdF',
+	'UCP_CG_GEN_ADRESSE_TITLE'		=> 'Génération adresses',
+	'UCP_CG_RECAP_EDF_TITLE'		=> 'Récap EdF',
 ));
+
 ?>

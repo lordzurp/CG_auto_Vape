@@ -18,7 +18,13 @@ if (empty($lang) || !is_array($lang))
 // equally where a string contains only two placeholders which are used to wrap text
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
+
+// Adding new category
+$lang['permission_cat']['gestion_cg']   = 'Gestion des CG';
+
 $lang = array_merge($lang, array(
-	'acl_u_cg' => array('lang' => 'Peut gerer des CG', 'cat' => 'misc'),
+	'acl_u_cg' => array('lang' => 'Peut gérer des CG', 'cat' => 'gestion_cg'),
+	'acl_m_cg' => array('lang' => 'Peut gérer des CG', 'cat' => 'gestion_cg'),
+	'acl_a_cg' => array('lang' => 'Peut gérer des CG', 'cat' => 'gestion_cg'),
 ));
 ?>

@@ -1,5 +1,5 @@
 <?php
-class ucp_cg
+class mcp_cg
 {
    var $u_action;
    var $new_config;
@@ -10,14 +10,14 @@ class ucp_cg
       switch($mode)
       {
          case 'index':
-            $this->page_title = 'UCP_CG';
-            $this->tpl_name = 'ucp_cg';
+            $this->page_title = 'MCP_CG';
+            $this->tpl_name = 'mcp_cg';
             break;
             
             
          case 'listes_PP':
-            $this->page_title = 'UCP_CG';
-            $this->tpl_name = 'ucp_cg_listes_pp';
+            $this->page_title = 'MCP_CG';
+            $this->tpl_name = 'mcp_cg_listes_pp';
             break;
       }
 

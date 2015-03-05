@@ -19,7 +19,7 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-    'UCP_CG_INDEX_TITLE'                        => 'Gestion CG',
-    'UCP_CG_LISTE_PP_TITLE'                        => 'listes PP',
+    'MCP_CG_INDEX_TITLE'                        => 'Gestion CG',
+    'MCP_CG_LISTE_PP_TITLE'                        => 'listes PP',
 ));
 ?>

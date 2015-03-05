@@ -1,0 +1,48 @@
+<!-- INCLUDE ucp_header.html -->
+debut {LISTE_EDF}
+	<table class="table1" cellspacing="1">
+		<!-- BEGIN block_name -->
+		<tr>
+			<td>{block_name.LISTE_EDF}</td>
+		</tr>
+		<!-- END block_name -->
+	</table>
+
+<!-- IF TITRE_EDF -->
+	<br>
+	EdF : {TITRE_EDF}
+	<form method="post">
+		Département : <input name="departement" type="text" value=""/>
+		<br>
+		J'ai lu et j'accepte la charte <input name="charte_ok" type="checkbox" value="1"/>
+		<br>
+	
+		<input name="submit" type="submit" value="Je m'inscris !" />
+		<input type="hidden" name="inscription" value="1" />
+	</form>
+	<br>
+	
+
+<!-- ENDIF -->
+
+charte : {CHARTE_VALIDE}
+departement : {DEP}
+inscription : {INSCRIPTION}
+
+<!-- IF INSCRIPTION -->
+	<!-- IF DEP_VALIDE == 0 -->
+		Le département n'est pas renseigné !
+	<!-- ENDIF -->
+	<!-- IF CHARTE_VALIDE == 0 -->
+		La charte n'est pas validée !
+	<!-- ENDIF -->
+	
+	<!-- IF DEP_VALIDE and CHARTE_VALIDE -->
+		inscription OK
+	<!-- ENDIF -->
+<!-- ENDIF -->
+
+<br>resultat : {RESULT}
+<br>ça marche ? : {OKKK}
+<br>data : {DATA_CONCAT}
+<!-- INCLUDE ucp_footer.html -->

@@ -1,0 +1,75 @@
+<!-- INCLUDE ucp_header.html -->
+<br>
+<form method="post">
+	Topic à parser
+   <input name="t" type="text" value="{TOPIC_ID}"/>
+   <input name="submit" type="submit" value="Tester" />
+</form>
+<br>
+
+debug mySQL : {DEBUGMYSQL}
+<br>
+<table class="table1" cellspacing="1">
+    <tr>
+        <th>id</th>
+        <th>posteur</th>
+        <th>liste des posts</th>
+        <th>Count</th>
+    </tr>
+    <!-- BEGIN block_name -->
+	<tr>
+        <td>{block_name.ID}</td>
+        <td>{block_name.POSTER}</td>
+        <td>{block_name.POSTER_POSTS}</td>
+		<td>
+			    <br>
+26650 <br>
+4200 :     {block_name.USER_4200}<br>
+3500 :     {block_name.USER_3500}<br>
+26500 <br>
+3000 :     {block_name.USER_3000}<br>
+18650 <br>
+3100 :     {block_name.USER_18_3100}<br>
+2500F:     {block_name.USER_18_2500_F}<br>
+2500N:     {block_name.USER_18_2500_N}<br>
+2100F:     {block_name.USER_18_2100_F}<br>
+2100N:     {block_name.USER_18_2100_N}<br>
+18500 <br>
+1000F:     {block_name.USER_18_1000_F}<br>
+1000N:     {block_name.USER_18_1000_N}<br>
+18350 <br>
+700F:     {block_name.USER_18_700_F}<br>
+700N:     {block_name.USER_18_700_N}<br>
+16340 <br>
+700 :     {block_name.USER_16_700}<br>
+
+    <br>
+		</td>
+    </tr>
+    <!-- END block_name -->
+    <br>
+26650 <br>
+4200 :     {TOTAL_4200}<br>
+3500 :     {TOTAL_3500}<br>
+26500 <br>
+3000 :     {TOTAL_3000}<br>
+18650 <br>
+3100 :     {TOTAL_18_3100}<br>
+2500F:     {TOTAL_18_2500_F}<br>
+2500N:     {TOTAL_18_2500_N}<br>
+2100F:     {TOTAL_18_2100_F}<br>
+2100N:     {TOTAL_18_2100_N}<br>
+18500 <br>
+1000F:     {TOTAL_18_1000_F}<br>
+1000N:     {TOTAL_18_1000_N}<br>
+18350 <br>
+700F:     {TOTAL_18_700_F}<br>
+700N:     {TOTAL_18_700_N}<br>
+16340 <br>
+700 :     {TOTAL_16_700}<br>
+    <br>
+<b>Total : {TOTAL}</b>
+<br>
+</table>
+
+<!-- INCLUDE ucp_footer.html -->

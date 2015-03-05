@@ -1,5 +1,18 @@
-<!-- INCLUDE overall_header.html -->
+<!-- INCLUDE ucp_header.html -->
+<br>
+<form method="post">
+	Topic à parser
+   <input name="t" type="text" value="{TOPIC_ID}"/>
+   <input name="submit" type="submit" value="Tester" />
+</form>
+<br>
 
-Hello, World!
+<table class="table1" cellspacing="1">
+    <!-- BEGIN block_name -->
+	<tr>
+        <td>{block_name.EDF}</td>
+    </tr>
+    <!-- END block_name -->
+</table>
 
-<!-- INCLUDE overall_footer.html -->
+<!-- INCLUDE ucp_footer.html -->
