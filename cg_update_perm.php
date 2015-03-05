@@ -13,6 +13,6 @@ $auth_admin = new auth_admin();
 
 $auth_admin->acl_add_option(array(
     'local'     => array(),
-    'global'    => array('u_cg')
+    'global'    => array('m_cg')
 ));
 ?>
