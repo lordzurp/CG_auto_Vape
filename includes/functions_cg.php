@@ -20,6 +20,13 @@ function liste_cg($status = 0)
 {
 	global $db, $auth, $user, $template;
 	global $phpbb_root_path, $phpEx, $config;
+	
+/**
+statut
+0 : archivée
+1 : en cours
+2 : toutes les CG
+*/
 
 	$sql = 'SELECT * FROM cg_cg ' . (($status == 2) ? '' : 'WHERE status = ' . $status);
 	$result = $db->sql_query($sql);
