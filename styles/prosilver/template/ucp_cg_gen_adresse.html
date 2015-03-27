@@ -1,117 +1,101 @@
+<!-- IF PRINT == 0 -->
+	<!-- INCLUDE ucp_header.html -->
+	<br>
+	Liste des CG
+	<table class="table1" cellspacing="1">
+		<tr>
+			<th>ID CG</th>
+			<th>Titre</th>
+		</tr>
+		<!-- BEGIN liste_cg -->
+		<tr>
+			<td>{liste_cg.ID}</td>
+			<td><a href="ucp.php?i=cg&mode=gen_adresse&cg_id={liste_cg.ID}">{liste_cg.TITRE}</a></td>
+		</tr>
+		<!-- END liste_cg -->
+	</table>
+	<br>
+	<br>
+	Liste des participants
+	<table class="table1" cellspacing="1">
+		<tr>
+			<th>Pseudo</th>
+			<th>Adresse</th>
+		</tr>
+		<!-- BEGIN liste_adresse -->
+		<tr>
+			<td>{liste_adresse.PSEUDO} </td>
+			<td>{liste_adresse.ADRESSE} </td>
+		</tr>
+		<!-- END liste_adresse -->
+	</table>
+	<br>
+	<form method="post">
+	<input type="submit" name="submit" value="Afficher les étiquettes page 1" />
+	<input type="hidden" name="print" value="1" />
+	<input type="hidden" name="start" value="0" />
+	</form>
+	<form method="post">
+	<input type="submit" name="submit" value="Afficher les étiquettes page 2" />
+	<input type="hidden" name="print" value="1" />
+	<input type="hidden" name="start" value="24" />
+	</form>
+	<form method="post">
+	<input type="submit" name="submit" value="Afficher les étiquettes page 3" />
+	<input type="hidden" name="print" value="1" />
+	<input type="hidden" name="start" value="48" />
+	</form>
+	<!-- INCLUDE ucp_footer.html -->
+<!-- ENDIF -->
+<!-- IF PRINT == 1 -->
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>CGVape address board</title>
-    <link href="labels.css" rel="stylesheet" type="text/css" >
-    <style>
-    body {
-        width: 21cm;
-        margin-left: 7mm;
-        margin-top: 12mm
-        }
-    #parent{
-        /* Avery 5160 labels -- CSS and HTML by MM at Boulder Information Services */
-        width: 54.7mm; /* plus .6 inches from padding */
-        height: 32mm; /* plus .125 inches from padding */
-        margin-right: 3mm; /* the gutter */
-        padding-left: 5mm;
-
-        float: left;
-		display: table;
-
-        overflow: hidden;
-        outline: 1px dotted; /* outline doesn't occupy space like border does */
-        }
-
-
-#child {
-    display: table-cell;
-		text-align: left;
-    vertical-align: middle;
-}
-
-    .page-break  {
-        clear: left;
-        display:block;
-        page-break-after:always;
-        }
-    </style>
-
+	<meta charset="utf-8">
+	<title>CGVape address board</title>
+	<link href="labels.css" rel="stylesheet" type="text/css" >
+	<style>
+		body {
+			width: 21cm;
+			margin-left: 7mm;
+			margin-top: 12mm
+		}
+		#parent{
+			/* Avery 5160 labels -- CSS and HTML by MM at Boulder Information Services */
+			width: 54.7mm; /* plus .6 inches from padding */
+			height: 32mm; /* plus .125 inches from padding */
+			margin-right: 3mm; /* the gutter */
+			padding-left: 5mm;
+		
+			float: left;
+			display: table;
+		
+			overflow: hidden;
+			outline: 1px dotted; /* outline doesn't occupy space like border does */
+		}
+		
+		#child {
+			display: table-cell;
+			text-align: left;
+			vertical-align: middle;
+		}
+		
+		.page-break  {
+			clear: left;
+			display:block;
+			page-break-after:auto;
+		}
+	</style>
+	
 </head>
 <body>
 
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
-<div id="parent">
-    <div id="child">Nom Prénom<br>2e ligne adresse<br>3e ligne adresse longue<br>4e ligne adresse</div>
-</div>
+<!-- BEGIN liste_adresse -->
+	<div id="parent" class="{liste_adresse.PAGE_BREAK}">
+		<div id="child">{liste_adresse.ADRESSE}</div>
+	</div>
+<!-- END liste_adresse -->
+
 </body>
 </html>
+<!-- ENDIF -->

@@ -23,7 +23,9 @@ if (empty($lang) || !is_array($lang))
 $lang['permission_cat']['gestion_cg']   = 'Gestion des CG';
 
 $lang = array_merge($lang, array(
-	'acl_u_cg' => array('lang' => 'Peut gérer des CG', 'cat' => 'gestion_cg'),
+	'acl_u_cg_ref' => array('lang' => 'Peut créer et gérer des CG', 'cat' => 'gestion_cg'),
+	'acl_u_cg_orga' => array('lang' => 'Peut organiser une CG', 'cat' => 'gestion_cg'),
+	'acl_u_cg' => array('lang' => 'Peut participer à une CG', 'cat' => 'gestion_cg'),
 	'acl_m_cg' => array('lang' => 'Peut gérer des CG', 'cat' => 'gestion_cg'),
 	'acl_a_cg' => array('lang' => 'Peut gérer des CG', 'cat' => 'gestion_cg'),
 ));

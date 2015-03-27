@@ -1,7 +1,60 @@
 <!-- INCLUDE ucp_header.html -->
-
-listes PP
-
-<div>{EXAMPLE_VAR}</div>
+<br>
+Liste des CG
+<table class="table1" cellspacing="1">
+	<tr>
+		<th>ID CG</th>
+		<th>Titre</th>
+	</tr>
+	<!-- BEGIN liste_cg -->
+	<tr>
+		<td>{liste_cg.ID}</td>
+		<td><a href="ucp.php?i=cg&mode=listes_PP&cg_id={liste_cg.ID}">{liste_cg.TITRE}</a></td>
+	</tr>
+	<!-- END liste_cg -->
+</table>
+<br>
+<br>
+Liste des participants
+<form method="post">
+<input type="hidden" name="maj" value="1" />
+<input type="submit" name="sumbit" value="Mettre à jour" />
+<table class="table1" cellspacing="1">
+	<tr>
+		<th>ID user</th>
+		<th>Pseudo</th>
+		<th>Contact</th>
+		<th>Charte</th>
+		<th>total PP1 ($)</th>
+		<th>PP1 OK</th>
+		<th>PP2</th>
+		<th>PP2 OK</th>
+		<th>PP3</th>
+		<th>PP3 OK</th>
+	</tr>
+	<!-- BEGIN liste_pp -->
+	<tr>
+		<td>{liste_pp.USER} </td>
+		<td>{liste_pp.PSEUDO}</td>
+		<td>
+		<ul class="profile-icons">
+			<li class="pm-icon"><a href="{liste_pp.U_PM}" title="MP"><span>Envoyer un MP</span></a></li>
+			<li class="email-icon"><a href="{liste_pp.U_EMAIL}" title="Email"><span>Email</span></a></li>
+		</ul>
+		</td>
+		<td><input type="checkbox" name="{liste_pp.USER}_charte" value="1" {liste_pp.CHARTE} /></td>
+		<td>{liste_pp.PP1}</td>
+		<td><input type="checkbox" name="{liste_pp.USER}_PP1_OK" value="1" {liste_pp.PP1_OK} /></td>
+		<td><input type="text" name="{liste_pp.USER}_PP2" value="{liste_pp.PP2}" /></td>
+		<td><input type="checkbox" name="{liste_pp.USER}_PP2_OK" value="1" {liste_pp.PP2_OK} /></td>
+		<td><input type="text" name="{liste_pp.USER}_PP3" value="{liste_pp.PP3}" /></td>
+		<td><input type="checkbox" name="{liste_pp.USER}_PP3_OK" value="1" {liste_pp.PP3_OK} /></td>
+	</tr>
+	<!-- END liste_pp -->
+</table>
+<input type="submit" name="sumbit" value="Mettre à jour" />
+</form>
+<br>
+{LISTE_PP_FORMATE}
 
 <!-- INCLUDE ucp_footer.html -->

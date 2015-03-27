@@ -1,0 +1,81 @@
+<!-- INCLUDE ucp_header.html -->
+<br>
+Liste des CG en cours
+<table class="table1" cellspacing="1">
+	<tr>
+		<th>ID CG</th>
+		<th>Titre</th>
+		<th>Orga</th>
+	</tr>
+	<!-- BEGIN liste_cg_en_cours -->
+	<tr>
+		<td>{liste_cg_en_cours.ID}</td>
+		<td><a href="ucp.php?i=cg&mode=recap_cg&cg_id={liste_cg_en_cours.ID}">{liste_cg_en_cours.TITRE}</a></td>
+		<td>{liste_cg_en_cours.ORGA}</td>
+	</tr>
+	<!-- END liste_cg_en_cours -->
+</table>
+<br>
+
+Liste des CG archivées
+<table class="table1" cellspacing="1">
+	<tr>
+		<th>ID CG</th>
+		<th>Titre</th>
+		<th>Orga</th>
+	</tr>
+	<!-- BEGIN liste_cg_archive -->
+	<tr>
+		<td>{liste_cg_archive.ID}</td>
+		<td><a href="ucp.php?i=cg&mode=recap_cg&cg_id={liste_cg_archive.ID}">{liste_cg_archive.TITRE}</a></td>
+		<td>{liste_cg_archive.ORGA}</td>
+	</tr>
+	<!-- END liste_cg_archive -->
+</table>
+<br>
+<br>
+Organisateur : {ORGA}<br>
+Total produits : {TOTAL_COST_PRODUITS}<br>
+Frais de port : {SHIPPING_COST}<br>
+Frais Paypal : {PP_FEES}<br>
+Total commande : {TOTAL_COST_COMMANDE}<br>
+<br>
+<table class="table1" cellspacing="1">
+	<tr>
+		<th>Référence</th>
+		<th>Désignation</th>
+		<th>total</th>
+		<th>total ($)</th>
+	</tr>
+	<!-- BEGIN liste_items_total -->
+	<tr>
+		<td>{liste_items_total.REF} </td>
+		<td>{liste_items_total.DES}</td>
+		<td>{liste_items_total.COUNT}</td>
+		<td>{liste_items_total.TOTAL_COST_ITEM}</td>
+	</tr>
+	<!-- END liste_items_total -->
+</table>
+
+<br>
+Liste des participants
+<table class="table1" cellspacing="1">
+	<tr>
+		<th>Pseudo</th>
+		<th>Commande</th>
+		<th>total produits ($)</th>
+		<th>total frais ($)</th>
+		<th>total ($)</th>
+	</tr>
+	<!-- BEGIN liste_commande -->
+	<tr>
+		<td>{liste_commande.PSEUDO} </td>
+		<td>{liste_commande.COMMANDE}</td>
+		<td>{liste_commande.COST}</td>
+		<td>{liste_commande.FEES}</td>
+		<td>{liste_commande.TOTAL}</td>
+	</tr>
+	<!-- END liste_commande -->
+</table>
+
+<!-- INCLUDE ucp_footer.html -->

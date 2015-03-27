@@ -1,75 +1,56 @@
 <!-- INCLUDE ucp_header.html -->
 <br>
-<form method="post">
-	Topic à parser
-   <input name="t" type="text" value="{TOPIC_ID}"/>
-   <input name="submit" type="submit" value="Tester" />
-</form>
-<br>
-
-debug mySQL : {DEBUGMYSQL}
-<br>
+Liste des CG
 <table class="table1" cellspacing="1">
-    <tr>
-        <th>id</th>
-        <th>posteur</th>
-        <th>liste des posts</th>
-        <th>Count</th>
-    </tr>
-    <!-- BEGIN block_name -->
 	<tr>
-        <td>{block_name.ID}</td>
-        <td>{block_name.POSTER}</td>
-        <td>{block_name.POSTER_POSTS}</td>
-		<td>
-			    <br>
-26650 <br>
-4200 :     {block_name.USER_4200}<br>
-3500 :     {block_name.USER_3500}<br>
-26500 <br>
-3000 :     {block_name.USER_3000}<br>
-18650 <br>
-3100 :     {block_name.USER_18_3100}<br>
-2500F:     {block_name.USER_18_2500_F}<br>
-2500N:     {block_name.USER_18_2500_N}<br>
-2100F:     {block_name.USER_18_2100_F}<br>
-2100N:     {block_name.USER_18_2100_N}<br>
-18500 <br>
-1000F:     {block_name.USER_18_1000_F}<br>
-1000N:     {block_name.USER_18_1000_N}<br>
-18350 <br>
-700F:     {block_name.USER_18_700_F}<br>
-700N:     {block_name.USER_18_700_N}<br>
-16340 <br>
-700 :     {block_name.USER_16_700}<br>
-
-    <br>
-		</td>
-    </tr>
-    <!-- END block_name -->
-    <br>
-26650 <br>
-4200 :     {TOTAL_4200}<br>
-3500 :     {TOTAL_3500}<br>
-26500 <br>
-3000 :     {TOTAL_3000}<br>
-18650 <br>
-3100 :     {TOTAL_18_3100}<br>
-2500F:     {TOTAL_18_2500_F}<br>
-2500N:     {TOTAL_18_2500_N}<br>
-2100F:     {TOTAL_18_2100_F}<br>
-2100N:     {TOTAL_18_2100_N}<br>
-18500 <br>
-1000F:     {TOTAL_18_1000_F}<br>
-1000N:     {TOTAL_18_1000_N}<br>
-18350 <br>
-700F:     {TOTAL_18_700_F}<br>
-700N:     {TOTAL_18_700_N}<br>
-16340 <br>
-700 :     {TOTAL_16_700}<br>
-    <br>
-<b>Total : {TOTAL}</b>
-<br>
+		<th>ID CG</th>
+		<th>Titre</th>
+	</tr>
+	<!-- BEGIN liste_cg -->
+	<tr>
+		<td>{liste_cg.ID}</td>
+		<td><a href="ucp.php?i=cg&mode=recap_edf&cg_id={liste_cg.ID}">{liste_cg.TITRE}</a></td>
+	</tr>
+	<!-- END liste_cg -->
 </table>
+
+<br>
+
+page <a href="ucp.php?i=cg&mode=recap_edf&cg_id={CG_ID}">1</a>, 
+<a href="ucp.php?i=cg&mode=recap_edf&cg_id={CG_ID}&start=10">2</a>, 
+<a href="ucp.php?i=cg&mode=recap_edf&cg_id={CG_ID}&start=20">3</a>, 
+<a href="ucp.php?i=cg&mode=recap_edf&cg_id={CG_ID}&start=30">4</a>, 
+<a href="ucp.php?i=cg&mode=recap_edf&cg_id={CG_ID}&start=40">5</a>, 
+<a href="ucp.php?i=cg&mode=recap_edf&cg_id={CG_ID}&start=50">6</a>, 
+<a href="ucp.php?i=cg&mode=recap_edf&cg_id={CG_ID}&start=60">7</a>, 
+<a href="ucp.php?i=cg&mode=recap_edf&cg_id={CG_ID}&start=70">8</a>, 
+<a href="ucp.php?i=cg&mode=recap_edf&cg_id={CG_ID}&start=80">9</a>, 
+<a href="ucp.php?i=cg&mode=recap_edf&cg_id={CG_ID}&start=90">10</a>
+<br>
+<br>
+<form method="post">
+	<input type="submit" value="màj" name="submit" > 
+	<input type="hidden" name="update_quantite" value="1" /> 
+	<input type="hidden" name="t" value="{TOPIC_ID}" />
+	<input type="hidden" name="start" value="{START_PAGE}" />
+
+	<table class="table1" cellspacing="1">
+	    <tr>
+	        <th>id</th>
+	        <th>posteur</th>
+	        <th>liste des posts</th>
+	        <th>Count</th>
+	    </tr>
+	    <!-- BEGIN liste_posts -->
+		<tr>
+	        <td>{liste_posts.ID}</td>
+	        <td>{liste_posts.POSTER}</td>
+	        <td>{liste_posts.POSTER_POSTS}</td>
+	        <td>{liste_posts.COMMANDE}</td>
+	    </tr>
+	    <!-- END liste_posts -->
+	
+	</table>
+</form>
 
 <!-- INCLUDE ucp_footer.html -->

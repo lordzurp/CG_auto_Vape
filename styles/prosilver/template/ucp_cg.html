@@ -1,18 +1,38 @@
 <!-- INCLUDE ucp_header.html -->
 <br>
-<form method="post">
-	Topic à parser
-   <input name="t" type="text" value="{TOPIC_ID}"/>
-   <input name="submit" type="submit" value="Tester" />
-</form>
+Liste des CG en cours
+<table class="table1" cellspacing="1">
+	<tr>
+		<th>ID CG</th>
+		<th>Titre</th>
+		<th>Orga</th>
+	</tr>
+	<!-- BEGIN liste_cg_en_cours -->
+	<tr>
+		<td>{liste_cg_en_cours.ID}</td>
+		<td><a href="ucp.php?i=cg&cg_id={liste_cg.ID}">{liste_cg_en_cours.TITRE}</a></td>
+		<td>{liste_cg_en_cours.ORGA}</td>
+	</tr>
+	<!-- END liste_cg_en_cours -->
+</table>
 <br>
 
+Liste des CG archivées
 <table class="table1" cellspacing="1">
-    <!-- BEGIN block_name -->
 	<tr>
-        <td>{block_name.EDF}</td>
-    </tr>
-    <!-- END block_name -->
+		<th>ID CG</th>
+		<th>Titre</th>
+		<th>Orga</th>
+	</tr>
+	<!-- BEGIN liste_cg_archive -->
+	<tr>
+		<td>{liste_cg_archive.ID}</td>
+		<td><a href="ucp.php?i=cg&cg_id={liste_cg.ID}">{liste_cg_archive.TITRE}</a></td>
+		<td>{liste_cg_archive.ORGA}</td>
+	</tr>
+	<!-- END liste_cg_archive -->
 </table>
+<br>
+
 
 <!-- INCLUDE ucp_footer.html -->

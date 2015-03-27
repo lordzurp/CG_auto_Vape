@@ -1,0 +1,80 @@
+<!-- INCLUDE ucp_header.html -->
+<br>
+Liste des CG
+<table class="table1" cellspacing="1">
+	<tr>
+		<th>ID CG</th>
+		<th>Titre</th>
+		<th>Statut</th>
+	</tr>
+	<!-- BEGIN liste_cg -->
+	<tr>
+		<td>{liste_cg.ID}</td>
+		<td><a href="ucp.php?i=cg&mode=create_cg&cg_id={liste_cg.ID}">{liste_cg.TITRE}</a></td>
+		<td>{liste_cg.STATUS}</td>
+	</tr>
+	<!-- END liste_cg -->
+</table>
+
+<br>
+<br>
+
+<form method="post">
+	Nouvelle CG<br>
+	ID : {CG_ID} <input name="cg_id" type="hidden" value="{CG_ID}" /><br>
+	Titre : <input name="cg_titre" type="text" value="{CG_TITRE}" /><br>
+	Topic EdF : <input name="cg_edf" type="number" value="{CG_EDF}" /><br>
+	Topic CG : <input name="cg_cg" type="number" value="{CG_CG}" /><br>
+	ID orga : <input name="cg_orga" type="number" value="{CG_ORGA}" /> {CG_ORGA_USERNAME}<br>
+	ID référent : <input name="cg_ref" type="number" value="{CG_REF}" /> {CG_REF_USERNAME}<br>
+	Frais de port : <input name="cg_shipping" type="text" value="{CG_SHIPPING}" /><br>
+	Frais Paypal : <input name="cg_pp_fees" type="text" value="{CG_PP_FEES}" /><br>
+	<br><hr><br>
+	Liste des produits<br>
+	<table class="table1" cellspacing="1">
+		<tr>
+			<th >Référence</th>
+			<th>Désignation</th>
+			<th>Prix unitaire</th>
+			<th>Supprimer</th>
+		</tr>
+		<!-- BEGIN liste_items -->
+		<tr>
+			<td><input name="{liste_items.ID}_{liste_items.REF}" type="text" value="{liste_items.REF}" /></td>
+			<td><input name="{liste_items.ID}_{liste_items.DES}" type="text" size="50" value="{liste_items.DES}" /></td>
+			<td><input name="{liste_items.ID}_{liste_items.PRIX}" type="text" value="{liste_items.PRIX}" /></td>
+			<td><input name="{liste_items.ID}_delete" type="checkbox" value="1" /></td>
+		</tr>
+		<!-- END liste_items -->
+		<tr>
+			<td><input name="new_item_1_ref" type="text" value="" /></td>
+			<td><input name="new_item_1_des" type="text" size="50" value="" /></td>
+			<td><input name="new_item_1_prix" type="text" value="" /></td>
+		</tr>
+		<tr>
+			<td><input name="new_item_2_ref" type="text" value="" /></td>
+			<td><input name="new_item_2_des" type="text" size="50" value="" /></td>
+			<td><input name="new_item_2_prix" type="text" value="" /></td>
+		</tr>
+		<tr>
+			<td><input name="new_item_3_ref" type="text" value="" /></td>
+			<td><input name="new_item_3_des" type="text" size="50" value="" /></td>
+			<td><input name="new_item_3_prix" type="text" value="" /></td>
+		</tr>
+		<tr>
+			<td><input name="new_item_4_ref" type="text" value="" /></td>
+			<td><input name="new_item_4_des" type="text" size="50" value="" /></td>
+			<td><input name="new_item_4_prix" type="text" value="" /></td>
+		</tr>
+		<tr>
+			<td><input name="new_item_5_ref" type="text" value="" /></td>
+			<td><input name="new_item_5_des" type="text" size="50" value="" /></td>
+			<td><input name="new_item_5_prix" type="text" value="" /></td>
+		</tr>
+	</table>
+	
+	<input name="maj" type="hidden" value="1" />
+	<input name="submit" type="submit" value="Créer / Mettre à jour" />
+</form>
+
+<!-- INCLUDE ucp_footer.html -->
